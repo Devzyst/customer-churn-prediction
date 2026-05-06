@@ -1,6 +1,8 @@
-# Byte-compiled / optimized / DLL files
+Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[codz]
+*.py[cod]
 *$py.class
 
 # C extensions
@@ -8,6 +10,12 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging
 build/
 develop-eggs/
 dist/
@@ -35,6 +43,7 @@ MANIFEST
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
+.eggs/
 
 # Unit test / coverage reports
 htmlcov/
@@ -48,6 +57,7 @@ coverage.xml
 *.cover
 *.py.cover
 .hypothesis/
+# Tests and coverage
 .pytest_cache/
 cover/
 
@@ -140,14 +150,24 @@ celerybeat.pid
 mnesia/
 rabbitmq/
 rabbitmq-data/
+.coverage
+htmlcov/
 
 # ActiveMQ
 activemq-data/
+# Jupyter
+.ipynb_checkpoints/
 
 # SageMath parsed files
 *.sage.py
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
 
 # Environments
+# Local environment
 .env
 .envrc
 .venv
@@ -208,11 +228,17 @@ tempCodeRunnerFile.py
 
 # PyPI configuration file
 .pypirc
+.env.*
 
 # Marimo
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+# Generated prediction outputs
+/data/predictions*.csv
 
 # Streamlit
 .streamlit/secrets.toml
+# Generated model artifacts
+/model/*.joblib
+/model/metrics.json
