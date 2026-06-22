@@ -1,12 +1,9 @@
-"""Central configuration for the churn prediction pipeline."""
-
 from dataclasses import dataclass
 from pathlib import Path
 
 
 @dataclass(frozen=True)
 class TrainingConfig:
-    """Configuration values used by the training workflow."""
 
     dataset_path: Path | None = None
     model_output_path: Path = Path("models/churn_model.joblib")
