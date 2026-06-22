@@ -1,8 +1,6 @@
-"""Command-line interface for training the churn model."""
-
 import argparse
-from pathlib import Path
 
+from pathlib import Path
 from churn_prediction.config import TrainingConfig
 from churn_prediction.model import train_and_evaluate
 
