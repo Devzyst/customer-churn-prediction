@@ -1,5 +1,3 @@
-"""Model training and evaluation workflow."""
-
 from pathlib import Path
 from typing import Any
 
@@ -9,7 +7,6 @@ from churn_prediction.features import detect_column_types, split_features_and_ta
 
 
 def build_preprocessing_pipeline(features):
-    """Create preprocessing steps for numeric and categorical customer attributes."""
     from sklearn.compose import ColumnTransformer
     from sklearn.impute import SimpleImputer
     from sklearn.pipeline import Pipeline
@@ -55,7 +52,6 @@ def build_model_pipeline(features):
 
 
 def train_and_evaluate(config: TrainingConfig) -> dict[str, Any]:
-    """Train the churn model, persist it and return core evaluation metrics."""
     from sklearn.metrics import accuracy_score, classification_report, roc_auc_score
     from sklearn.model_selection import train_test_split
 
