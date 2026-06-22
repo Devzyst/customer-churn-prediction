@@ -1,14 +1,7 @@
-"""Data loading helpers for churn modelling."""
-
 from pathlib import Path
 
 
 def load_customer_data(dataset_path: Path | str | None = None):
-    """Load customer data from CSV or return a small demo dataset.
-
-    The demo dataset keeps the project runnable for recruiters even when a private
-    production dataset cannot be committed to the repository.
-    """
     import pandas as pd
 
     if dataset_path is None:
@@ -22,8 +15,7 @@ def load_customer_data(dataset_path: Path | str | None = None):
     return pd.read_csv(path)
 
 
-def build_demo_customer_data():
-    """Create a compact, realistic sample dataset for smoke tests and demos."""
+def build_demo_customer_data():   
     import pandas as pd
 
     records = [
