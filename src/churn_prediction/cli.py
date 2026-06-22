@@ -6,7 +6,6 @@ from churn_prediction.model import train_and_evaluate
 
 
 def parse_args() -> argparse.Namespace:
-    """Parse command-line options for the training workflow."""
     parser = argparse.ArgumentParser(description="Train a customer churn prediction model.")
     parser.add_argument("--data", type=Path, default=None, help="Path to a CSV dataset.")
     parser.add_argument(
@@ -25,7 +24,6 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> None:
-    """Train the model and print a concise evaluation summary."""
     args = parse_args()
     config = TrainingConfig(
         dataset_path=args.data,
